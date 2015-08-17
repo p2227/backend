@@ -1,0 +1,17 @@
+{
+  "name": "csdn-comment",
+  "version": "1.0.0",
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "async": "^1.4.2",
+    "cheerio": "^0.19.0"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "server": "http-server -p 8088"
+  }
+}
