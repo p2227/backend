@@ -12,6 +12,7 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "server": "http-server -p 8088"
+    "debug": "node --debug-brk app.js",
+    "start": "node app.js",
   }
 }

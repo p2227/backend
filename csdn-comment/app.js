@@ -2,8 +2,7 @@ var http = require('http');
 var cheerio = require('cheerio');
 var async = require('async');
 var fs = require('fs');
-
-var localJSON;
+var localJSON = require('./local.json');
 
 //封装并返回http请求头部信息
 function getOpt(path){
@@ -27,11 +26,6 @@ function getOpt(path){
     }
   };
 
-  if(!localJSON){
-    localJSON = fs.readFileSync('./local.json'); //把一些敏感易变数据另外放到配置文件中
-    localJSON = JSON.parse(localJSON);
-  }
-  
   for(key in localJSON){
     if(localJSON.hasOwnProperty(key)){
       opt.headers[key] = localJSON[key];
